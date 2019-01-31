@@ -1,0 +1,24 @@
+<ion-view title="Login"  hide-nav-bar="true" hide-back-button="true"  id="page4">
+    <ion-content padding="true" style="background: url(img/LguC7A54QyKkEYqgWIaH_back.png) no-repeat center;background-size:cover;" class=" manual-remove-top-padding">
+        <div class="spacer" style="width: 300px; height: 24px;"></div>
+        <div class="login">
+            <img src="img/FoeAcpoKSdCvhTOTaysi_logo.png" width="50%" height="auto" style="display: block; margin-left: auto; margin-right: auto;">
+        </div>
+        <form id="login-form1" class="list" ng-submit="doLogin()">
+            <div class="spacer" style="width: 300px; height: 24px;"></div>
+            <ion-list id="login-list1">
+                <label class="item item-input" id="login-input1">
+                    <span class="input-label">Username</span>
+                    <input type="text" ng-model="loginData.username" placeholder="">
+                </label>
+                <label class="item item-input" id="login-input2">
+                    <span class="input-label">Password</span>
+                    <input type="password" ng-model="loginData.password" placeholder="">
+                </label>
+            </ion-list>
+            <div class="spacer" style="height: 40px;"></div>
+            <button id="login-button1" class="button button-stable  button-block" type="submit">Log in</button>
+            <a ui-sref="signup" id="login-button2" class="button button-light  button-block button-clear">Or create an account</a>
+        </form>
+    </ion-content>
+</ion-view>

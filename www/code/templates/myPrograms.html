@@ -1,0 +1,26 @@
+<ion-view title="My Programs" id="page1">
+    <ion-content padding="true" class="has-header">
+    <form ng-controller="myProgramsCtrl">
+        <ion-list id="myPrograms-list3">
+            <ion-toggle ng-change="pushNotificationChange()" ng-model="formData.is_completed" toggle-class="toggle-energized" id="myPrograms-toggle1">Due / Completed</ion-toggle>
+            <label class="item item-select" id="myPrograms-select2">
+                <span class="input-label">Time</span>
+                <select ng-change="pushNotificationChange()" ng-model="formData.dates">
+                    <option value="1">1 Month</option>
+                    <option value="2">5 Month</option>
+                    <option value="3">Last Year</option>
+                    <option value="4">All the Time</option>
+                </select>
+            </label>
+        </ion-list>
+        <div class="spacer" style="width: 300px; height: 32px;"></div>
+        <ion-list id="myPrograms-list4">
+            <ion-item ng-repeat="item in items" href="#/program/{{item.courseid}}" class="item-icon-right item" id="myPrograms-list-item4">
+                <h2>{{item.course_description}}</h2>
+                <p>{{item.venue}}</p>           
+                <i class="icon ion-android-favorite"></i>
+            </ion-item>
+        </ion-list>
+     </form>
+    </ion-content>
+</ion-view>

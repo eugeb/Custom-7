@@ -1,0 +1,25 @@
+/* Empty. Add your own CSS if you like */
+.logo {
+    padding:10px;
+    margin-top:20px;
+}
+/*.logo img{
+    box-shadow: 1px 1px 1px 1px;
+}*/
+.login {
+    background: #D74177; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#D74177, #FFE98A); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#D74177, #FFE98A); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#D74177, #FFE98A); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#D74177, #FFE98A); /* Standard syntax */
+}
+.login .item {
+    background-color: transparent;
+    color: #fff;
+}
+.login .input-label {
+    color: #fff;
+}
+.login input {
+    color: #fff;
+}

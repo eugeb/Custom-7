@@ -1,0 +1,35 @@
+<ion-view title="My Profile &amp; Settings" id="page3">
+    <ion-content padding="true" class="has-header">
+        <div id="myProfileSettings-container1">
+            <form id="myProfileSettings-form3" class="list" ng-submit="save()">
+                <ion-toggle toggle-class="toggle-balanced" ng-model="settings.active" id="myProfileSettings-toggle2">Availability</ion-toggle>
+                <div class="spacer" style="width: 300px; height: 13px;"></div>
+                <ion-item class="range range-energized" id="myProfileSettings-range1">Rating
+                    <input ng-model="settings.rating" type="range" min="0" max="100" step="1">
+                </ion-item>
+                <!--ion-toggle ng-model="settings.corporate" toggle-class="toggle-energized" id="myProfileSettings-toggle3">Login Type (Trainer / Company)</ion-toggle-->
+                <button type="submit" id="myProfileSettings-button1" class="button button-energized  button-block">Save Changes</button>
+            </form>
+        </div>
+        <div class="spacer" style="width: 300px; height: 16px;"></div>
+        <div id="myProfileSettings-container3">
+            <form id="myProfileSettings-form5" class="list" ng-submit="changepassword()">
+                <h4 id="myProfileSettings-heading1" style="color:#CEAE03;font-weight:lighter;text-align:center;">Change Password</h4>
+                <label class="item item-input" id="myProfileSettings-input6">
+                    <span class="input-label">Password</span>
+                    <input ng-model="settings.password" type="password" placeholder="">
+                </label>
+                <label class="item item-input" id="myProfileSettings-input7">
+                    <span class="input-label">Confirm Password</span>
+                    <input ng-model="settings.confirm_password" type="password" placeholder="">
+                </label>
+                <button type="submit" id="myProfileSettings-button4" class="button button-energized  button-block">Save Password</button>
+            </form>
+        </div>
+        <div class="spacer" style="width: 300px; height: 22px;"></div>
+        <!--div id="myProfileSettings-container4">
+            <form id="myProfileSettings-form7" class="list">
+            </form>
+        </div-->
+    </ion-content>
+</ion-view>

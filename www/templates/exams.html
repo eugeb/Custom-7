@@ -1,0 +1,14 @@
+<ion-view ng-init="init()" title="My Exams" hide-nav-bar="false" show-nav-bar="true" hide-back-button="true" id="page1"  data-tap-disabled="true">
+    <ion-content padding="true" class="has-header">
+        <div class="spacer" style="width: 300px; height: 32px;"></div>
+        <ion-list id="myExams-list4">
+            <ion-item ng-repeat="item in list" ng-click="takeExam()" ng-disabled="item.isfinished" class="item-icon-right item {{item.classcompleted}}" id="myExams-list-item4">
+                <h2>{{item.description}}</h2>
+				<p>{{item.course_description}}</p>
+                <i class="icon ion-clipboard"></i>
+            </ion-item>
+        </ion-list>
+        <!--button id="myPrograms-button23" class="button button-positive  button-block">Load More...</button-->
+        
+    </ion-content>
+</ion-view>

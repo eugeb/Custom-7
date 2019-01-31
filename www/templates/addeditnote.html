@@ -1,0 +1,14 @@
+<ion-view title="Google Calendar" id="page-options" has-tabs="true">
+<ion-content scroll="false" class="main-content" padding="true" class="has-header">
+		<div class="list">
+		  <label class="item item-input">
+			<input ng-model="notes.title" type="text" placeholder="Title">
+		  </label>
+		  <label class="item item-input">
+			<textarea ng-model="notes.text" style="min-height:200px" placeholder="Note"></textarea>
+		  </label>
+		</div>
+		<button ng-click="savechanges()" class="button button-block button-positive">Save Changes</button>
+		<button ng-click="goback()" class="button button-block button-positive">Discard changes</button>
+	</ion-content>
+</ion-view>

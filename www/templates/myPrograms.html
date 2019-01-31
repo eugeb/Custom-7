@@ -1,0 +1,38 @@
+<ion-view ng-init="init()" title="My Programs" hide-nav-bar="false" show-nav-bar="true" hide-back-button="true" id="page1"  data-tap-disabled="true">
+    <ion-content padding="true" class="has-header">
+        <ion-list id="myPrograms-list3">
+            <ion-toggle ng-change="pushNotificationChange()" ng-model="selection.togglecomplete" toggle-class="toggle-energized" id="myPrograms-toggle1">Due / Completed</ion-toggle>
+            <label class="item item-select" id="myPrograms-select2">
+                <span class="input-label">Time</span>
+                <select ng-change="pushNotificationChange()" ng-model="selection.time">
+                    <option value="1">1 Month</option>
+                    <option value="2">5 Month</option>
+                    <option value="3">Last Year</option>
+                    <option value="4">All the Time</option>
+                </select>
+            </label>
+        </ion-list>
+        <div class="spacer" style="width: 300px; height: 32px;"></div>
+        <ion-list id="myPrograms-list4">
+            <ion-item ng-repeat="item in selection.list" class="item-thumbnail-left item-icon-right" id="myPrograms-list-item4" ui-sref="menu.view_course_trainer({programId : {{item.courseid}} })">
+                <img ng-src="{{item.preview_image}}">
+                <h2>{{item.course_description}}</h2>
+                <i class="icon ion-android-alert"></i>
+            </ion-item>
+            <!--ion-item class="item-thumbnail-left" id="myPrograms-list-item50">
+                <img src="img/lstQpYbpQseU8HYhBQYB_45a5f815ab0e597fec5d2371b560ed98.png">
+                <h2>Signing Course</h2>
+            </ion-item>
+            <ion-item class="item-thumbnail-left" id="myPrograms-list-item52">
+                <img src="img/jCBvBWqxSvWwaRrz1OpA_images.jpg">
+                <h2>Painting Course</h2>
+            </ion-item>
+            <ion-item class="item-thumbnail-left" id="myPrograms-list-item53">
+                <img src="img/zuG6CO58Ris8fSpt8FgD_download.jpg">
+                <h2>Basketball</h2>
+            </ion-item-->
+        </ion-list>
+        <!--button id="myPrograms-button23" class="button button-positive  button-block">Load More...</button-->
+        
+    </ion-content>
+</ion-view>

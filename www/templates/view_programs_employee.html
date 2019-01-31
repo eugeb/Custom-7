@@ -1,0 +1,37 @@
+<ion-view ng-init="init()" title="My Programs" hide-nav-bar="false" hide-back-button="true" id="page13"  data-tap-disabled="true">
+    <ion-content padding="true" class="has-header">
+        <ion-list id="myPrograms3-list40">
+            <ion-toggle ng-change="pushNotificationChange()" ng-model="selection.togglecomplete" toggle-class="toggle-energized" id="myPrograms-toggle1">Due / Completed</ion-toggle>
+            <label class="item item-select" id="myPrograms-select2">
+                <span class="input-label">Time</span>
+                <select ng-change="pushNotificationChange()" ng-model="selection.time">
+                    <option value="1">1 Month</option>
+                    <option value="2">5 Month</option>
+                    <option value="3">Last Year</option>
+                    <option value="4">All the Time</option>
+                </select>
+            </label>
+        </ion-list>
+        <div class="spacer" style="width: 300px; height: 32px;"></div>
+        <div id="myPrograms3-container9">
+            <ion-list id="myPrograms3-list43">
+                <ion-item ng-repeat="item in selection.list" class="{{item.cssclass}}" id="myPrograms3-list-item55" ng-click="openCourse(item.courseid)">
+                    <img ng-src="{{item.preview_image}}">
+                    <h2positive>{{item.course_description}}
+                        <i ng-hide="item.completed" class="icon ion-android-alarm-clock"></i>
+                    </h2positive>
+					<br /><br />
+					<button ng-click="openExamsView(item.courseid)" stop-event="click" ng-show="item.hasexams" style="font-size: 12px;" class="button icon-left ion-star button-positive">Exam Available</button>
+                </ion-item>
+                <!--ion-item class="item-thumbnail-left dark  active" id="myPrograms3-list-item60">
+                    <img src="img/MR3Q2ljqRmO3e0r1L3F5_4599440845.jpg">
+                    <h2dark>Makeup Couse</h2dark>
+                </ion-item>
+                <ion-item class="item-thumbnail-left dark  active" id="myPrograms3-list-item61">
+                    <img src="img/FxHdKIXmQMqcbekEmUM9_download1.jpg">
+                    <h2dark>Computer Couse</h2dark>
+                </ion-item-->
+            </ion-list>
+        </div>
+    </ion-content>
+</ion-view>

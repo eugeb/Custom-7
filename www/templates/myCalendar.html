@@ -1,0 +1,18 @@
+<ion-view title="My Calendar" id="page2" has-tabs="true">
+<ion-header-bar class="bar-positive">
+	<div class="buttons">
+		<button class="button button-icon ion-compose" ng-click="modal.show()">
+		</button>
+	</div>
+</ion-header-bar>
+<ion-content scroll="false" class="main-content" padding="true" class="has-header">
+		<button ng-click="optionsGoogleCalendar()" class="button button-block button-positive">Google Calendar</button>
+	  <div id="myCalendar2-button-bar3" class="button-bar">
+            <a ng-click="openMonthlyCalendar()" id="myCalendar2-button12" ng-class="modeselected.selector1class">Month</a>
+			<a ng-click="openMonthlyCalendar()" id="myCalendar2-button12" class="button button-stable button-block">{{viewTitle}}</a>
+            <a ng-click="openWeeklyCalendar()" id="myCalendar-button10" ng-class="modeselected.selector2class">Week</a>
+		</div>
+		
+		<calendar calendar-mode="modeselected.mode" event-source="eventssource" event-selected="onEventSelected(event)"  title-changed="onViewTitleChanged(title)" />
+	</ion-content>
+</ion-view>

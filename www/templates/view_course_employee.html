@@ -1,0 +1,62 @@
+<ion-view title="Course Description" id="page14" style="background-color:#91B4E2;">
+    <ion-content padding="true" class="has-header">
+        <div class="list card" id="courseOfCooking2-card25">
+            <ion-item class="item-avatar" id="courseOfCooking2-list-item62">
+                <h2>Professor: {{data.list.trainer_info[0].name}}</h2>
+            </ion-item>
+            <div class=" item item-image">
+                <img src="{{data.list.info[0].preview_image}}" width="200px"  style="max-width:200px;" height="200px" style="display: block; margin-left: auto; margin-right: auto;">
+            </div>
+            <ion-item ng-click="hide_trainerinfo()" class="item-icon-left item-icon-right dark  bar bar-header bar-positive" id="courseOfCooking2-list-item77">
+                <i class="icon ion-information"></i>Trainer Information
+                <i class="{{forms.icon2}}"></i>
+            </ion-item>
+			<div ng-hide="forms.trainerinfodropdown">
+            <div class="spacer" style="width: 300px; height: 24px;"></div>
+            <div ng-bind-html="data.list.info[0].trainer_introduction" id="courseOfCooking2-markdown35" style="color:#000000;text-align:center;" class="active"></div>
+            <div class="spacer" style="width: 300px; height: 24px;"></div>
+            <ion-item id="courseOfCooking2-list-item79">Name: {{data.list.trainer_info[0].name}}</ion-item>
+            <ion-item id="courseOfCooking2-list-item80">Years of experience: {{data.list.trainer_info[0].years_experience}}</ion-item>
+            <ion-item id="courseOfCooking2-list-item81">Email: {{data.list.trainer_info[0].email}}</ion-item>
+            </div>
+			<ion-item ng-click="hide_info()" class="item-icon-left item-icon-right dark  bar bar-header bar-positive" id="courseOfCooking-list-item40">
+                <i class="icon ion-information"></i>
+                <b>Information</b>
+                <i class="{{forms.icon2}}"></i>
+            </ion-item>
+			<div ng-hide="forms.informationdropdown">
+				<ion-item class="item-icon-left calm" id="courseOfCooking2-list-item78">
+					<i class="icon ion-android-star-half"></i>My Rating: {{data.list.student[0].rating}}</ion-item>
+				<ion-item class="item-icon-left calm" id="courseOfCooking2-list-item74">
+					<i class="icon ion-android-people"></i>My Attendance: {{data.list.student[0].myattendance}}</ion-item>
+			</div>
+            <ion-item ng-click="hide_content()" class="item-icon-left item-icon-right  bar bar-header bar-positive" id="courseOfCooking2-list-item63">
+                <i class="icon ion-bookmark"></i>Content
+              <i class="{{forms.icon3}}"></i>
+            </ion-item>
+            <div ng-hide="forms.contentdropdown">
+                <ion-item ng-repeat="item in data.list.content" class="item" id="courseOfCooking-list-item46">
+                    <h2calm>{{item.unit_description}}</h2calm>
+                </ion-item>
+            </div>
+            <ion-item ng-click="gotocalendar()" class="item-icon-left item-icon-right  bar bar-header bar-positive" id="courseOfCooking2-list-item70">
+                <i class="icon ion-android-calendar"></i>Calendar
+                <i class="icon ion-android-arrow-dropright-circle"></i>
+            </ion-item>
+            <ion-item ng-click="toggleNotesContent()" class="item-icon-left item-icon-right  bar bar-header bar-positive" id="courseOfCooking2-list-item75">
+                <i class="icon ion-edit"></i>Notes
+                <i class="{{forms.icon5}}"></i>
+            </ion-item>
+			<div ng-hide="forms.notescontent" style="text-align: right;">
+				<div class="list" style="text-align: left;">
+					<a ng-click="openoptions({{item.noteid}})" ng-repeat="item in noteslist" class="item item-icon-right" href="#">
+						<i class="icon ion-android-apps"></i>
+						<h2>{{item.title}}</h2>
+					  <p>{{item.text}}</p>
+					</a>
+				</div>
+				<i ng-click="addnewnote()" style="text-align: right;font-size: 50px;padding: 10px;color: #004ccc;" class="icon ion-plus-circled"></i>
+			</div>
+        </div>
+    </ion-content>
+</ion-view>

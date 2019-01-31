@@ -1,0 +1,61 @@
+<ion-view title="Course Description" id="page9" style="background-color:#91B4E2;">
+    <ion-content padding="false" class=" manual-remove-top-padding has-header">
+        <div class="list card" id="courseOfCooking-card24">
+            <ion-item class="item-avatar" id="courseOfCooking-list-item27">
+                <h2>Professor: {{data.list.trainer_info[0].name}}</h2>
+            </ion-item>
+            <div class=" item item-image">
+                <img src="{{data.list.info[0].preview_image}}" width="200px"  style="max-width:200px;" height="200px" style="display: block; margin-left: auto; margin-right: auto;">
+            </div>
+            <ion-item ng-click="hide_students()" class="item-icon-left item-icon-right  bar bar-header bar-positive" id="courseOfCooking-list-item38">
+                <i class="icon ion-android-contacts"></i>
+                <b>Students {{data.list.attendance[0].attendance}}</b>
+                <i class="{{forms.icon}}"></i>
+            </ion-item>
+            <div ng-hide="forms.studentsdropdown">
+            <ion-item ng-repeat="user in data.list.users" class="item-avatar calm" id="courseOfCooking-list-item43">
+                <h2calm>{{user.name}}</h2calm>
+            </ion-item>
+            <!--ion-item class="item-avatar calm" id="courseOfCooking-list-item45">
+                <h2calm>Mr. Scott</h2calm>
+            </ion-item>
+            <ion-item class="item-avatar calm" id="courseOfCooking-list-item46">
+                <h2calm>Mary Weiss</h2calm>
+            </ion-item>
+            <ion-item class="item-avatar calm" id="courseOfCooking-list-item47">
+                <h2calm>Jane Brown</h2calm>
+            </ion-item>
+            <ion-item class="item-avatar calm" id="courseOfCooking-list-item48">
+                <h2calm>George Stefan Swift</h2calm>
+            </ion-item-->
+            </div>
+            <ion-item ng-click="hide_info()" class="item-icon-left item-icon-right dark  bar bar-header bar-positive" id="courseOfCooking-list-item40">
+                <i class="icon ion-information"></i>
+                <b>Information</b>
+                <i class="{{forms.icon2}}"></i>
+            </ion-item>
+            <div ng-hide="forms.informationdropdown">
+                <ion-item class="item-icon-left calm" id="courseOfCooking-list-item41">
+                    <i class="icon ion-bookmark"></i>Description: {{data.list.info[0].course_description}}</ion-item>
+                <ion-item class="item-icon-left calm" id="courseOfCooking-list-item42">
+                    <i class="icon ion-android-star-half"></i>Rating: {{data.list.info[0].rating}}</ion-item>
+                <ion-item class="item-icon-left calm" id="courseOfCooking-list-item49">
+                    <i class="icon ion-android-people"></i>Attendance: {{data.list.attendance[0].attendance}}</ion-item>
+            </div>
+            <ion-item ng-click="gotocalendar()" class="item-icon-left item-icon-right  bar bar-header bar-positive" id="courseOfCooking-list-item39" /*ui-sref="menu.myCalendar2"*/>
+                <i class="icon ion-android-calendar"></i>Calendar
+                <i class="icon ion-android-arrow-dropright-circle"></i>
+            </ion-item>
+            <ion-item ng-click="hide_content()" class="item-icon-left item-icon-right  bar bar-header bar-positive" id="courseOfCooking-list-item37">
+                <i class="icon ion-bookmark"></i>Content
+                <i class="{{forms.icon3}}"></i>
+            </ion-item>
+            <div ng-hide="forms.contentdropdown">
+                <ion-item ng-repeat="item in data.list.content" class="item" id="courseOfCooking-list-item46">
+                    <h2calm>{{item.unit_description}}</h2calm>
+                </ion-item>
+            </div>
+        </div>
+
+    </ion-content>
+</ion-view>
